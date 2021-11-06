@@ -1,16 +1,38 @@
 .reg {
     margin: 0 auto;
     outline: 1px solid black;
+    border-radius: 10px;
     padding: 5px;
     width: 400px;
 }
-
+input {
+    outline: none;
+    transition: box-shadow 0.3s linear;
+}
 .container {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
+input:required:invalid {
+    box-shadow: 1px 1px 1px 1px red;
+}
+.password__strength__block {
+    width: 100%;
+}
+#indicator {
+    content: "";
+    width: 25%;
+    background-color: red;
+    transition: background-color 0.5s linear;
+    transition: width 0.5s linear;
+    height: 5px;
+}
+
+.button {
+    height: 50px;
+}
 .container * {
     margin: 3px;
 }

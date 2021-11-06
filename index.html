@@ -11,17 +11,22 @@
     <div class="reg">
         <form action="/reg" method="post">
             <div class="container">
-                <label>First Name</label>
-                <input type="text" name="first-name" placeholder="Enter first name" required maxlength="255">
-                <label>Last Name</label>
-                <input type="text" name="last-name" placeholder="Enter last name" required maxlength="255">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="Enter email" required maxlength="255">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Enter password" required minlength="8" maxlength="64">
-                <input type="submit" value="Sign up">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" name="first-name" placeholder="Enter first name" required maxlength="255">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" name="last-name" placeholder="Enter last name" required maxlength="255">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Enter email" required maxlength="255">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Enter password" required minlength="8" maxlength="64">
+                <div id="password__strength__block">
+                    <div>Password strength: </div>
+                    <div id="indicator"></div>
+                </div>
+                <button class="button" type="submit">Sign up</button>
             </div>
         </form>
     </div>
 </body>
+<script src="resources/js/passwordStrength.js"></script>
 </html>

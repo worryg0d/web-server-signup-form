@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"path/filepath"
@@ -15,6 +16,7 @@ func reg(w http.ResponseWriter, req *http.Request)  {
 		log.Println(err.Error())
 		return
 	}
+	fmt.Fprint(w, "Activation link has been sent")
 
 	log.Printf(
 		"first-name: %s\t last-name: %s\t email: %s\t password: %s\n",
@@ -23,6 +25,7 @@ func reg(w http.ResponseWriter, req *http.Request)  {
 		req.Form.Get("email"),
 		req.Form.Get("password"),
 		)
+
 }
 
 func main() {
